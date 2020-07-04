@@ -32,7 +32,9 @@ public class BuglyManager {
         strategy.setAppVersion(AppInfoUtil.getVersionName()); //App的版本
         strategy.setAppPackageName(AppInfoUtil.mPackageName); //App的包名
         //Bugly会在启动10s后联网同步数据。若您有特别需求，可以修改这个时间
-        //strategy.setAppReportDelay(20000); //改为20s
+        strategy.setAppReportDelay(20000); //改为20s
+
+        //CrashReport.setIsDevelopmentDevice(context,BuildConfig.DEBUG);
     }
 
     /**
